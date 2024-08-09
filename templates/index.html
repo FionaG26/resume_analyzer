@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Analyzer</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="resume" accept=".pdf, .docx" required>
+            <textarea name="job_description" placeholder="Paste job description here..." required></textarea>
+            <button type="submit">Analyze</button>
+        </form>
+        <div id="results" style="display:none;">
+            <h2>Results</h2>
+            <div id="finalScore"></div>
+            <div id="contactInfo"></div>
+            <div id="sections"></div>
+            <div id="keywordScore"></div>
+            <div id="experienceScore"></div>
+            <div id="skillsScore"></div>
+            <div id="educationCheck"></div>
+            <div id="formatCheck"></div>
+            <div id="achievements"></div>
+            <div id="misspelledWords"></div>
+            <div id="grammaticalErrors"></div>
+            <div id="diversityMentions"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
+
