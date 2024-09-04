@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => response.json())
         .then(data => {
+            console.log(data);  // Debugging line to check the received data
+
             // Display results in percentage
             document.getElementById('keyword-score').textContent = `${(data.keyword_score * 100).toFixed(2)}%`;
             document.getElementById('experience-score').textContent = `${(data.experience_score * 100).toFixed(2)}%`;
@@ -22,6 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('grammatical-errors').textContent = data.grammatical_errors;
             document.getElementById('diversity-mentions').textContent = data.diversity_mentions;
             document.getElementById('final-score').textContent = `${data.final_score.toFixed(2)}%`;
+
+            // Show the results section
+            document.getElementById('results').style.display = 'block';
         })
         .catch(error => console.error('Error:', error));
     });

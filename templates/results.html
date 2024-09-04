@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Analysis Results</h1>
+        <div id="results">
+            <div class="result-item">
+                <h2>Keyword Score</h2>
+                <p class="score" id="keyword-score"></p>
+            </div>
+            <div class="result-item">
+                <h2>Experience Score</h2>
+                <p class="score" id="experience-score"></p>
+            </div>
+            <div class="result-item">
+                <h2>Skills Score</h2>
+                <p class="score" id="skills-score"></p>
+            </div>
+            <div class="result-item">
+                <h2>Education Check</h2>
+                <p class="score" id="education-check"></p>
+            </div>
+            <div class="result-item">
+                <h2>Format Check</h2>
+                <p class="score" id="format-check"></p>
+            </div>
+            <div class="result-item">
+                <h2>Achievements Count</h2>
+                <p class="score" id="achievements"></p>
+            </div>
+            <div class="result-item">
+                <h2>Misspelled Words</h2>
+                <p id="misspelled-words"></p>
+            </div>
+            <div class="result-item">
+                <h2>Grammatical Errors</h2>
+                <p id="grammatical-errors"></p>
+            </div>
+            <div class="result-item">
+                <h2>Diversity Mentions</h2>
+                <p id="diversity-mentions"></p>
+            </div>
+            <div class="result-item">
+                <h2>Final Score</h2>
+                <p class="final-score" id="final-score"></p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='results.js') }}"></script>
+</body>
+</html>
+
